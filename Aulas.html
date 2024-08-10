@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background: #3f6648;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #3f6648;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #3f6648;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        video {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        footer {
+            background: #3f6648;
+            color: #fff;
+            text-align: center;
+            padding: 0.1px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="">  </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aulass.html">Aulas</a></li>
+                <li><a href="sobre.html">Sobre </a></li>
+
+                <li><a href="#" id="loginBtn">Login/Cadastro</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div id="inicio" class="content">
+            <h2>Fotossíntese</h2>
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+             <code>video</code>.
+            </video>
+        </div>
+        
+        <div id="aulas" class="content">
+            <h2>Fotossíntese</h2>
+            <p>A fotossíntese é o processo pelo qual as plantas produzem seu próprio alimento usando luz solar, água e dióxido de carbono. Para quem está aprendendo a plantar, entender os princípios básicos da fotossíntese pode ajudar a cultivar plantas mais saudáveis e produtivas.
+                
+                Aspectos importantes para o plantio:
+                <br>
+                
+                1. Luz: As plantas precisam de luz adequada para realizar a fotossíntese. Observe as necessidades de luz de cada espécie - algumas preferem sol pleno, outras sombra parcial.
+                <br>
+                
+                2. Água: A água é essencial para a fotossíntese. Aprenda a regar corretamente, evitando excesso ou falta de água.
+                
+                <br>
+                3. Nutrientes: Embora não participem diretamente da fotossíntese, os nutrientes do solo são cruciais para a saúde da planta e eficiência fotossintética.
+                <br>
+                4. Folhas: As folhas são as "fábricas" onde ocorre a fotossíntese. Mantenha-as limpas e livres de pragas para melhor absorção de luz.
+                <br>
+                5. Espaçamento: Plantas muito próximas podem sombrear umas às outras, reduzindo a fotossíntese. Respeite o espaçamento recomendado para cada espécie.
+                <br>
+                6. Poda: A poda adequada pode melhorar a exposição das folhas à luz, aumentando a eficiência fotossintética.
+                <br>
+                <br>
+                Dicas práticas:
+                <br>
+            
+                - Posicione as plantas de acordo com suas necessidades de luz.
+                <br>
+                - Regue preferencialmente pela manhã ou no final da tarde.
+                <br>
+                - Use adubo orgânico para melhorar a nutrição do solo.
+                <br>
+                - Remova folhas doentes ou danificadas regularmente.
+                <br>
+                - Observe o crescimento das plantas e faça ajustes no espaçamento se necessário.
+                <br>
+
+        </div>
+        
+        <div id="exercício" class="content">
+            <h2>Exercícios</h2>
+            <ul>
+                <li><strong>Exercício 1:</strong>  Como você pode ajustar a disposição das suas plantas no jardim ou horta para garantir que todas recebam luz adequada para a fotossíntese?</li>
+                <li><strong>Exercício 2:</strong>  Que sinais uma planta pode apresentar quando não está recebendo luz suficiente para realizar a fotossíntese de forma eficiente?</li>
+                <li><strong>Exercício 3:</strong>  Como as práticas de rega e adubação podem ser adaptadas para diferentes estações do ano, considerando as necessidades fotossintéticas das plantas?</li>
+            </ul>
+            
+        </div>
+        
+    </div>
+
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="loginForm">
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Nome de usuário ou Email:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="submit">Login</button>
+                    <button type="button" id="showRegisterForm">Cadastro</button>
+                </form>
+            </div>
+            <div id="registerForm" style="display: none;">
+                <h2>Cadastro</h2>
+                <form>
+                    <label for="newUsername">Nome de usuário:</label>
+                    <input type="text" id="newUsername" name="newUsername" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="dob">Data de Nascimento: dd/mm/aa</label>
+                    <input type="text" id="dob" name="dob" required>
+
+                    <label for="newPassword">Senha:</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+                    
+                    <label for="confirmPassword">Confirmar Senha:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    
+                    <button type="submit">Cadastro</button>
+                    <button type="button" id="showLoginForm">Voltar ao Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+ 
+    var modal = document.getElementById("loginModal");
+    var loginBtn = document.getElementById("loginBtn");
+    var span = document.getElementsByClassName("close")[0];
+    var loginForm = document.getElementById("loginForm");
+    var registerForm = document.getElementById("registerForm");
+    var showRegisterFormBtn = document.getElementById("showRegisterForm");
+    var showLoginFormBtn = document.getElementById("showLoginForm");
+
+    loginBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    showRegisterFormBtn.onclick = function() {
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+    }
+
+    showLoginFormBtn.onclick = function() {
+        registerForm.style.display = "none";
+        loginForm.style.display = "block";
+    }
+</script>
+
+
+
+    <br>
+    <footer>
+        <p>&copy; 2024 Carrot Ideias.</p>
+    </footer>
+</body>
+</html>

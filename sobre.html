@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrot Ideias</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #3f6648;
+            background-color: #547961;
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 0% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #3f6b49;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #233c22;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        footer {
+            background: #3f6648;
+            color: #fff;
+            text-align: center;
+            padding: 0.2px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aulass.html">Aulas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#" id="loginBtn">Login/Cadastro</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <h1>Carrot Ideias</h1>
+            <p>
+                 Apresentação e Créditos
+                
+                Projeto: Do Campo para a Cidade<br><br>
+                
+                Estamos felizes em apresentar nosso projeto para o concurso Agrinho, intitulado "Do Campo para a Cidade". Este projeto visa conectar o conhecimento rural com a vida urbana, proporcionando um portal inovador que traz informações e aprendizado sobre a zona rural diretamente para a cidade.<br><br>
+                
+                Equipe:<br>
+                - Thairini Ueki: Responsável pela concepção e desenvolvimento do design do site, além da integração das funcionalidades básicas.<br>
+                - Elias Fantacini: Especialista na implementação de conteúdo e estruturação das seções do site, garantindo a clareza e a usabilidade.<br>
+                - Mara Fernanda: Focada na criação de conteúdos e textos, bem como na pesquisa e organização das informações apresentadas no site.<br><br>
+                
+                Agradecimentos Especiais:<br>
+                Gostaríamos de expressar nossa sincera gratidão ao **Professor Marcelo Yamoto** pelo auxílio e apoio indispensáveis durante o desenvolvimento deste projeto. Sua orientação e feedback foram fundamentais para a realização do nosso trabalho e para a superação dos desafios encontrados ao longo do caminho.<br><br>
+                
+                Sobre o Projeto:<br>
+                Nosso objetivo é facilitar o acesso a conhecimentos sobre a vida e a cultura rural por meio de um ambiente digital acessível e interativo. O site "Do Campo para a Cidade" oferece recursos como vídeo aulas, exercícios, resumos e ferramentas de pesquisa para enriquecer a compreensão sobre a zona rural.<br><br>
+                
+                Apesar de nosso site estar em uma fase inicial e utilizar apenas HTML e CSS, estamos ansiosos para expandir suas funcionalidades no futuro. Entre as melhorias planejadas estão a implementação de um sistema de conquistas e um modo noturno para o conforto visual dos usuários. Agradecemos pela oportunidade de participar deste concurso e esperamos que nosso projeto contribua para a valorização e o conhecimento da vida rural.<br><br>
+                
+                Com gratidão,<br>
+                Thairini Ueki, Elias Fantacini e Mara Fernanda</p>
+                
+            
+            </section>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            section {
+                text-align: justify; 
+                padding: 20px;
+                max-width: 800px; 
+                margin: 0 auto; 
+            }
+            p {
+                line-height: 1.6; 
+                margin: 0;
+            }
+        </style>
+
+
+
+
+
+
+
+        
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="loginForm">
+                    <h2>Login</h2>
+                    <form>
+                        <label for="username">Nome de usuário ou Email:</label>
+                        <input type="text" id="username" name="username" required>
+                        
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                        
+                        <button type="submit">Login</button>
+                        <button type="button" id="showRegisterForm">Cadastro</button>
+                    </form>
+                </div>
+                <div id="registerForm" style="display: none;">
+                    <h2>Cadastro</h2>
+                    <form>
+                        <label for="newUsername">Nome de usuário:</label>
+                        <input type="text" id="newUsername" name="newUsername" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="dob">Data de Nascimento: dd/mm/aa</label>
+                        <input type="text" id="dob" name="dob" required>
+
+                        <label for="newPassword">Senha:</label>
+                        <input type="password" id="newPassword" name="newPassword" required>
+                        
+                        <label for="confirmPassword">Confirmar Senha:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        
+                        <button type="submit">Cadastro</button>
+                        <button type="button" id="showLoginForm">Voltar ao Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+     
+        var modal = document.getElementById("loginModal");
+        var loginBtn = document.getElementById("loginBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var loginForm = document.getElementById("loginForm");
+        var registerForm = document.getElementById("registerForm");
+        var showRegisterFormBtn = document.getElementById("showRegisterForm");
+        var showLoginFormBtn = document.getElementById("showLoginForm");
+
+        loginBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        showRegisterFormBtn.onclick = function() {
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
+        }
+
+        showLoginFormBtn.onclick = function() {
+            registerForm.style.display = "none";
+            loginForm.style.display = "block";
+        }
+    </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Carrot Ideias. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

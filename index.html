@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrot Ideias</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #3f6648;
+            background-color: #547961;
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 0% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #3f6b49;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #233c22;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aulass.html">Aulas</a></li>
+                <li><a href="sobre.html">Sobre </a></li>
+                <li><a href="#" id="loginBtn">Login/Cadastro</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <h1>Bem-vindo ao Carrot Ideias</h1>
+            <p>Nosso projeto tem como objetivo trazer inovação e conhecimento para zona urbana, expandindo conhecimento com a cultura e a vida da zona rural. Trazer conhecimento do campo pra cidade, como? Com o site "Carrot Ideias" é como um portal, onde você pode acessar e ver aulas de acordo com o conteúdo do campo, dentre isso ele possui: Login e cadastro, aba de pesquisa, vídeo aulas, exercício, resumos.
+                Com nosso site, os estudos e conhecimento sobre zona rural ficará mais fácil com um lugar especializado só para isso, porém, não está totalmente completo, algumas coisas que gostaríamos de incluir em nosso projeto é um sistema de conquistas por meio de cartas colecionáveis, para trazer motivação e empenho dos usuários, tambem tinhamos interesse em acrescentar o modo noturno do site para o conforto visual, e mais algumas funcionalidades.
+                Utilizar somente HTML e CSS limitou nosso site, pois essas ferramentas que gostaríamos de incluir precisariam de JavaScript. No entanto, fizemos o nosso melhor com o que podemos fazer juntamente com pesquisas para a construção do site e esperamos que você goste do resultado. Agradecemos por nos acompanhar nesta jornada e estamos ansiosos para continuar aprimorando nossa plataforma.</p>
+    
+        </section>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            section {
+                text-align: justify; 
+                padding: 20px;
+                max-width: 800px; 
+                margin: 0 auto; 
+            }
+            p {
+                line-height: 1.6; 
+                margin: 0;
+            }
+        </style>
+
+
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="loginForm">
+                    <h2>Login</h2>
+                    <form>
+                        <label for="username">Nome de usuário ou Email:</label>
+                        <input type="text" id="username" name="username" required>
+                        
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                        
+                        <button type="submit">Login</button>
+                        <button type="button" id="showRegisterForm">Cadastro</button>
+                    </form>
+                </div>
+                <div id="registerForm" style="display: none;">
+                    <h2>Cadastro</h2>
+                    <form>
+                        <label for="newUsername">Nome de usuário:</label>
+                        <input type="text" id="newUsername" name="newUsername" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="dob">Data de Nascimento: dd/mm/aa</label>
+                        <input type="text" id="dob" name="dob" required>
+
+                        <label for="newPassword">Senha:</label>
+                        <input type="password" id="newPassword" name="newPassword" required>
+                        
+                        <label for="confirmPassword">Confirmar Senha:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        
+                        <button type="submit">Cadastro</button>
+                        <button type="button" id="showLoginForm">Voltar ao Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+     
+        var modal = document.getElementById("loginModal");
+        var loginBtn = document.getElementById("loginBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var loginForm = document.getElementById("loginForm");
+        var registerForm = document.getElementById("registerForm");
+        var showRegisterFormBtn = document.getElementById("showRegisterForm");
+        var showLoginFormBtn = document.getElementById("showLoginForm");
+
+        loginBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        showRegisterFormBtn.onclick = function() {
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
+        }
+
+        showLoginFormBtn.onclick = function() {
+            registerForm.style.display = "none";
+            loginForm.style.display = "block";
+        }
+    </script>
+
+        <footer>
+            <p>&copy; 2024 Carrot Ideias. Todos os direitos reservados.</p>
+        </footer>
+</body>
+</html>
+

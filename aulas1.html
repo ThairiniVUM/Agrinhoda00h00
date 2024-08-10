@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background: #3f6648;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #3f6648;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #3f6648;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        video {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        footer {
+            background: #3f6648;
+            color: #fff;
+            text-align: center;
+            padding: 0.1px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="">  </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aulass.html">Aulas</a></li>
+                <li><a href="sobre.html">Sobre </a></li>
+
+                <li><a href="#" id="loginBtn">Login/Cadastro</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div id="inicio" class="content">
+            <h2>Formação e Composição do Solo</h2>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+             <code>video</code>.
+            </video>
+        </div>
+        
+        <div id="aulas" class="content">
+            <h2>Formação e Composição do Solo</h2>
+            <p>Processos de Formação: O solo se forma através da intemperização das rochas e minerais ao longo de longos períodos. Esse processo inclui a desintegração física das rochas (como a quebra por ação de água e vento) e a decomposição química (como a alteração de minerais pela reação com ácidos e água).</p>
+                
+            Fatores Influentes:
+                <br>
+                
+                Rochas Mãe: A composição original do solo é influenciada pelas rochas das quais ele se formou.
+                <br>
+                Clima: A temperatura e a precipitação afetam a velocidade da intemperização e a formação de solos.
+                <br>
+                Organismos: Plantas, bactérias, fungos e animais ajudam a decompor a matéria orgânica e a criar húmus, melhorando a estrutura do solo.<br>
+                Topografia: A inclinação e o relevo influenciam a drenagem e a erosão do solo.<br>
+                Tempo: O solo leva milhares de anos para se formar completamente e seus atributos podem mudar com o tempo.
+<br>
+                <br>
+                Composição do Solo
+                <br>
+                <br>
+                Partículas Minerais: O solo é composto principalmente por partículas minerais de diferentes tamanhos, que são classificadas em:
+                <br>
+                Areia: Partículas grandes e de pouca coesão. Boa drenagem, mas baixa retenção de nutrientes.<br>
+                Silte: Partículas médias, que retêm um pouco mais de água e nutrientes do que a areia.<br>
+                Argila: Partículas muito pequenas, com alta capacidade de retenção de água e nutrientes, mas pode ser propensa à compactação.
+<br>
+Matéria Orgânica: Composta por restos de plantas e animais em decomposição, conhecida como húmus. A matéria orgânica melhora a estrutura do solo, aumenta a capacidade de retenção de água e fornece nutrientes essenciais.
+<br>Água e Ar: O solo contém espaços porosos que armazenam água e ar. A proporção de água e ar é crucial para a saúde das plantas; solos excessivamente secos ou saturados podem prejudicar o crescimento das plantas.
+<br>
+Nutrientes: O solo fornece nutrientes essenciais para as plantas, como nitrogênio (N), fósforo (P), potássio (K), cálcio (Ca), magnésio (Mg) e enxofre (S). A disponibilidade desses nutrientes depende da composição e do pH do solo.
+<br><br>
+Resumo
+
+<br>A formação do solo resulta da intemperização das rochas e é influenciada por fatores como clima, organismos e topografia. Sua composição inclui partículas minerais (areia, silte e argila), matéria orgânica, água e ar. A interação desses componentes determina a fertilidade e a capacidade do solo de sustentar a vegetação.<br>
+
+        </div>
+        
+        <div id="exercício" class="content">
+            <h2>Exercícios</h2>
+            <ul>
+                <li><strong>Exercício 1:</strong>  Explique como a matéria orgânica influencia a fertilidade do solo e dê exemplos de como ela pode ser adicionada ao solo.</li>
+                <li><strong>Exercício 2:</strong>  Liste e descreva os três principais tipos de partículas minerais no solo e explique como cada um afeta a drenagem e a retenção de nutrientes.</li>
+                <li><strong>Exercício 3:</strong>  Como o clima e a topografia influenciam a formação do solo? Dê exemplos de como essas variáveis podem afetar o solo em uma região específica.</li>
+            </ul>
+            
+        </div>
+        
+    </div>
+
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="loginForm">
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Nome de usuário ou Email:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="submit">Login</button>
+                    <button type="button" id="showRegisterForm">Cadastro</button>
+                </form>
+            </div>
+            <div id="registerForm" style="display: none;">
+                <h2>Cadastro</h2>
+                <form>
+                    <label for="newUsername">Nome de usuário:</label>
+                    <input type="text" id="newUsername" name="newUsername" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="dob">Data de Nascimento: dd/mm/aa</label>
+                    <input type="text" id="dob" name="dob" required>
+
+                    <label for="newPassword">Senha:</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+                    
+                    <label for="confirmPassword">Confirmar Senha:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    
+                    <button type="submit">Cadastro</button>
+                    <button type="button" id="showLoginForm">Voltar ao Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+ 
+    var modal = document.getElementById("loginModal");
+    var loginBtn = document.getElementById("loginBtn");
+    var span = document.getElementsByClassName("close")[0];
+    var loginForm = document.getElementById("loginForm");
+    var registerForm = document.getElementById("registerForm");
+    var showRegisterFormBtn = document.getElementById("showRegisterForm");
+    var showLoginFormBtn = document.getElementById("showLoginForm");
+
+    loginBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    showRegisterFormBtn.onclick = function() {
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+    }
+
+    showLoginFormBtn.onclick = function() {
+        registerForm.style.display = "none";
+        loginForm.style.display = "block";
+    }
+</script>
+
+
+
+    <br>
+    <footer>
+        <p>&copy; 2024 Carrot Ideias.</p>
+    </footer>
+</body>
+</html>

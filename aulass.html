@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <header>
+
+        
+        <div class=""></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Aulas</a></li>
+                <li><a href="sobre.html">Sobre </a></li>
+
+                <li><a href="#" id="loginBtn">Login/Cadastro</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Carrot Ideias</h1>
+            <p>Assista os melhores vídeos e aprenda algo novo!</p>
+        </section>
+
+        <section id="videos">
+            <h2>Vídeos</h2>
+            <div class="video">
+                <h3>Fotossíntese</h3>
+                <p>Fotossíntese é um processo realizado pelas plantas para a produção de energia necessária para a sua sobrevivência.</p>
+                <a href="aulas.html" target="_blank">Assistir</a>
+            </div>
+            <div class="video">
+                <h3>Formação e Composição do Solo</h3>
+                <p>Solo é a camada que recobre a superfície terrestre. Os solos são corpos formados por meio do intemperismo químico e do intemperismo físico das rochas, sendo constituídos essencialmente por minerais, matéria orgânica, água e ar, além de pequenos animais e micro-organismos.</p>
+                <a href="aulas1.html" target="_blank">Assistir</a>
+            </div>
+
+            <div class="video">
+                <p>Embora eu tenha planejado incluir muito mais em meu projeto, por se tratar de um exemplo, optei por adicionar apenas uma parte reduzida. A intenção foi mostrar uma amostra representativa das funcionalidades e do design que pretendo implementar. Em uma versão completa, você pode esperar ver uma integração mais extensa de recursos e conteúdo.</p>
+            </div>
+         
+        </section>
+
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="loginForm">
+                    <h2>Login</h2>
+                    <form>
+                        <label for="username">Nome de usuário ou Email:</label>
+                        <input type="text" id="username" name="username" required>
+                        
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                        
+                        <button type="submit">Login</button>
+                        <button type="button" id="showRegisterForm">Cadastro</button>
+                    </form>
+                </div>
+                <div id="registerForm" style="display: none;">
+                    <h2>Cadastro</h2>
+                    <form>
+                        <label for="newUsername">Nome de usuário:</label>
+                        <input type="text" id="newUsername" name="newUsername" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="dob">Data de Nascimento: dd/mm/aa</label>
+                        <input type="text" id="dob" name="dob" required>
+
+                        <label for="newPassword">Senha:</label>
+                        <input type="password" id="newPassword" name="newPassword" required>
+                        
+                        <label for="confirmPassword">Confirmar Senha:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        
+                        <button type="submit">Cadastro</button>
+                        <button type="button" id="showLoginForm">Voltar ao Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+     
+        var modal = document.getElementById("loginModal");
+        var loginBtn = document.getElementById("loginBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var loginForm = document.getElementById("loginForm");
+        var registerForm = document.getElementById("registerForm");
+        var showRegisterFormBtn = document.getElementById("showRegisterForm");
+        var showLoginFormBtn = document.getElementById("showLoginForm");
+
+        loginBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        showRegisterFormBtn.onclick = function() {
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
+        }
+
+        showLoginFormBtn.onclick = function() {
+            registerForm.style.display = "none";
+            loginForm.style.display = "block";
+        }
+    </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Carrot Ideias. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
